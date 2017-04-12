@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#master",
-    "dragula.js": "bevacqua/dragula#^3.7.2"
+     "dragula.js": "bevacqua/dragula#^3.7.2"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
