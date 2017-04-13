@@ -385,6 +385,10 @@ function dragula (initialContainers, options) {
       }
 
       var immediate = getImmediateChild(target, elementBehindCursor);
+      if(!immediate) {
+        return true;
+      }
+
       var reference = getReference(target, immediate, clientX, clientY);
       var initial = isInitialPlacement(target, reference);
       if (initial) {
@@ -410,6 +414,7 @@ function dragula (initialContainers, options) {
 
     var item = _copy || _item;
     var elementBehindCursor = getElementBehindPoint(_mirror, clientX, clientY);
+
     var dropTarget = findDropTarget(elementBehindCursor, clientX, clientY);
     var changed = dropTarget !== null && dropTarget !== _lastDropTarget;
     if (changed || dropTarget === null) {
@@ -515,14 +520,12 @@ function dragula (initialContainers, options) {
     }
 
     function inside () { // faster, but only available if dropped inside a child element
-      if(target){
       var rect = target.getBoundingClientRect();
       if (horizontal) {
         return resolve(x > rect.left + getRectWidth(rect) / 2);
       }
       return resolve(y > rect.top + getRectHeight(rect) / 2);
-    }
-    else return resolve(true);
+
     }
 
     function resolve (after) {
