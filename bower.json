@@ -16,12 +16,12 @@
     "dragula"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#master"
+    "polymer": "Polymer/polymer#2"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
-    "web-component-tester": "Polymer/web-component-tester",
-    "webcomponentsjs": "webcomponents/webcomponentsjs"
+    "iron-component-page": "PolymerElements/iron-component-page#2",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2",
+    "web-component-tester": "^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
   }
 }
